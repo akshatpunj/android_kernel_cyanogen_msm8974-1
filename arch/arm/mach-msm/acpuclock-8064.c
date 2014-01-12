@@ -219,9 +219,9 @@ static struct acpu_level tbl_slow[] __initdata = {
 
 static struct acpu_level tbl_nom[] __initdata = {
 #ifdef CONFIG_LOW_CPUCLOCKS
-	{ 1, {    81000, HFPLL, 2, 0x06 }, L2(0),   750000 },
 	{ 1, {   162000, HFPLL, 2, 0x0C }, L2(0),   825000 },
 	{ 1, {   270000, HFPLL, 2, 0x14 }, L2(0),   850000 },
+	//{ 1, {   378000, HFPLL, 2, 0x1C }, L2(0),   900000 },
 	{ 1, {   384000, PLL_8, 0, 0x00 }, L2(1),   875000 },
 #else
 	{ 1, {   384000, PLL_8, 0, 0x00 }, L2(0),   900000 },
@@ -306,6 +306,7 @@ static struct acpu_level tbl_faster[] __initdata = {
 #else
 	{ 1, {   384000, PLL_8, 0, 0x00 }, L2(0),   850000 },
 #endif
+<<<<<<< HEAD
 	{ 0, {   432000, HFPLL, 2, 0x20 }, L2(L2_BW_MID),   875000 },
 	{ 1, {   486000, HFPLL, 2, 0x24 }, L2(L2_BW_MID),   875000 },
 	{ 0, {   540000, HFPLL, 2, 0x28 }, L2(L2_BW_MID),   900000 },
